@@ -1,15 +1,20 @@
 <template lang="pug">
-    div#base
-        h1 Hello There my friend
-        router-link(to="/projects") Projects
+    div#home
+        div#content_container
+            div#link_icon_container
+            WelcomeMessage
+        <!--        router-link(to="/projects") Projects-->
 </template>
 
 <script>
+
+    import WelcomeMessage from "../components/WelcomeMessage";
     export default {
-        name: "Home"
+        name: "Home",
+        components: {WelcomeMessage}
     }
 </script>
 
 <style scoped>
-
+    
 </style>

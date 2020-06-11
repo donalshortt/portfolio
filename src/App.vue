@@ -1,5 +1,7 @@
 <template lang="pug">
-    div#base
+    div#app
+        video(autoplay muted loop)
+            source(src="./assets/outputCityscape1000.mp4" type="video/mp4")
         router-view
 </template>
 
@@ -15,5 +17,20 @@ export default {
 </script>
 
 <style>
-  
+    body {
+        margin: 0;
+        font-family: 'PT Mono', monospace;
+    }
+    
+    video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    
+    #app {
+        padding: 0;
+    }
 </style>
