@@ -32,17 +32,13 @@
         color: whitesmoke;
         height: 2em;
         width: 2em;
-        margin-left: 3.5vw;
-        margin-right: 3.5vw;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
         cursor: pointer;
-        transition: color 0.5s;
         opacity: 0;
-    }
-
-    #icn1, #icn2, #icn3 {
-        -webkit-transition: opacity 1s;
-        -moz-transition: opacity 1s;
-        transition: opacity 1s;
+        -webkit-transition: opacity 1s, color 0.5s;
+        -moz-transition: opacity 1s, color 0.5s;
+        transition: opacity 1s, color 0.5s;
     }
 
     .fade {

@@ -86,7 +86,7 @@
                 setTimeout(this.highlight, 100, count + 1);
             },
 
-            unHighlight: function (target) { target.style.color = "white"; },
+            unHighlight: function (target) { target.style.color = "whitesmoke"; },
 
             reveal: function () {
                 let target = document.getElementById("home")
@@ -99,16 +99,12 @@
 <style scoped>
     #welcome_message {
         z-index: 100000;
-        color: #f1f1f1;
+        color: whitesmoke;
     }
 
     #welcome_text_container {
         text-align: center;
         vertical-align: center;
         font-size: 2em;
-    }
-
-    p {
-        color: black;
     }
 </style>

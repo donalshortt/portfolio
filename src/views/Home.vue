@@ -3,7 +3,8 @@
         div#content_container
             LinkDisplay(ref="linkDisp")
             WelcomeMessage(:welcomeMessage="welcomeMessage", :speed="speed", ref="welMsg")
-            router-link(to="/projects") Projects
+            div#router_link_container
+                router-link(to="/projects" id="projectLink") Projects
 </template>
 
 <script>
@@ -15,6 +16,9 @@
         mounted() {
             this.$refs.welMsg.welcomeDisplay(this.speed);
             setTimeout(this.$refs.linkDisp.introLinks, this.welcomeMessageLength(this.welcomeMessage) * this.speed + 2000);
+            setTimeout(function () {
+                document.getElementById("projectLink").classList.toggle("fade")
+            }, this.welcomeMessageLength(this.welcomeMessage) * this.speed + 2000);
         },
         data() {
             return {
@@ -48,5 +52,32 @@
 
     #content_container {
         z-index: 100000000;
+        text-align: center;
+    }
+
+    #router_link_container {
+        margin-top: 8vh;
+    }
+
+    #projectLink {
+        border: 2px solid whitesmoke;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 1em;
+        border-radius: 5%;
+        opacity: 0;
+        -webkit-transition: opacity 1.5s;
+        -moz-transition: opacity 1.5s;
+        transition: opacity 1.5s;
+    }
+
+    #projectLink:hover {
+        border-color: #0047b3;
+        color: #0047b3;
+        background-color: whitesmoke;
+    }
+
+    #projectLink.fade {
+        opacity: 1;
     }
 </style>
