@@ -1,37 +1,43 @@
 <template lang="pug">
     div#home
-        div#content_container
-            LinkDisplay(ref="linkDisp")
-            WelcomeMessage(:welcomeMessage="welcomeMessage", :speed="speed", ref="welMsg")
-            div#router_link_container
-                router-link(to="/projects" id="projectLink") Projects
+            div#content_container
+                LinkDisplay(ref="linkDisp")
+                WelcomeMessage(:welcomeMessage="welcomeMessage", :speed="speed", ref="welMsg")
+                div#routerLink
+                    router-link(to="../projects" id="projectLink") Projects
 </template>
 
 <script>
     import WelcomeMessage from "../components/WelcomeMessage";
     import LinkDisplay from "../components/LinkDisplay";
+    
     export default {
         name: "Home",
         components: {LinkDisplay, WelcomeMessage},
         mounted() {
+            let animateDelay = this.welcomeMessageLength(this.welcomeMessage) * this.speed + 2000;
             this.$refs.welMsg.welcomeDisplay(this.speed);
-            setTimeout(this.$refs.linkDisp.introLinks, this.welcomeMessageLength(this.welcomeMessage) * this.speed + 2000);
+            setTimeout(this.$refs.linkDisp.introLinks, animateDelay);
             setTimeout(function () {
-                document.getElementById("projectLink").classList.toggle("fade")
-            }, this.welcomeMessageLength(this.welcomeMessage) * this.speed + 2000);
+                document.getElementById("projectLink").classList.toggle("fadein")
+                sessionStorage.setItem("animated" , "true");
+            }, animateDelay);
+        },
+        activated() {
+            if (sessionStorage.getItem("animated") !== null) {
+                document.getElementById("projectLink").style.opacity = 1;
+            }
         },
         data() {
             return {
                 welcomeMessage: ["HEY I'M DONAL", "I'M A STUDENT DEVELOPER.", "BORN IN IRELAND", "LIVING IN", "AMSTERDAM", "AVAILABLE TO", "YOU :)"],
-                speed: 50
+                speed: 50,
             }
         },
         methods: {
             welcomeMessageLength: function (msg) {
                 let count = 0;
-                msg.forEach(line => {
-                    count += line.length;
-                })
+                msg.forEach(line => { count += line.length; })
                 return count;
             }
         }
@@ -47,16 +53,18 @@
         width: 100%;
         background: #333333;
         position: fixed;
-        transition: background-color 1s;
+        -webkit-transition: opacity 1.5s, background-color 1s;
+        -moz-transition: opacity 1.5s, background-color 1s;
+        transition: opacity 1.5s, background-color 1s;
     }
 
     #content_container {
         z-index: 100000000;
         text-align: center;
     }
-
-    #router_link_container {
-        margin-top: 8vh;
+    
+    #routerLink {
+        margin-top: 4vh;
     }
 
     #projectLink {
@@ -77,7 +85,11 @@
         background-color: whitesmoke;
     }
 
-    #projectLink.fade {
+    #projectLink.fadein {
         opacity: 1;
+    }
+    
+    #content_container.fadeout {
+        opacity: 0;
     }
 </style>

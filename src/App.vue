@@ -2,7 +2,9 @@
     div#app
         video(autoplay muted loop)
             source(src="./assets/outputCityscape1000.mp4" type="video/mp4")
-        router-view
+        transition(name="fade")
+            keep-alive
+                router-view
 </template>
 
 <script>
@@ -35,4 +37,15 @@ export default {
         height: 100vh;
         width: 100vw;
     }
+    
+    
+    .fade-enter-active,  .fade-leave-active {
+        transition: opacity .25s;
+    }
+    
+    .fade-enter, .fade-leave-to {
+        transition: opacity .25s;
+        opacity: 0;
+    }
+
 </style>
