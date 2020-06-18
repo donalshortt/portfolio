@@ -1,5 +1,5 @@
 <template>
-    <div id="link_display">
+    <div id="link-display">
         <font-awesome-icon :icon="['fab', 'github-square']" class="icon" id="icn1"/>
         <font-awesome-icon :icon="['fab', 'linkedin']" class="icon" id="icn2"/>
         <font-awesome-icon :icon="['far', 'address-book']" class="icon" id="icn3"/>
@@ -22,7 +22,7 @@
 </script>
 
 <style scoped>
-    #link_display {
+    #link-display {
         display: flex;
         justify-content: center;
     }

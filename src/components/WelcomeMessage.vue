@@ -1,6 +1,6 @@
 <template>
-    <div id="welcome_message">
-        <div id="welcome_text_container">
+    <div id="welcome-message">
+        <div id="welcome-text-container">
         </div>
     </div>
 </template>
@@ -27,7 +27,7 @@
                     if (count1 < welcomeMsg.length) {
                         let count2 = 0;
                         let msgLine = document.createElement("p");
-                        let currentLine = document.getElementById("welcome_text_container").appendChild(msgLine);
+                        let currentLine = document.getElementById("welcome-text-container").appendChild(msgLine);
 
                         (function printDelay() {
                             // print line char-by-char
@@ -61,7 +61,7 @@
             },
 
             makeTargetable: function () {
-                let target = document.getElementById("welcome_text_container").lastChild;
+                let target = document.getElementById("welcome-text-container").lastChild;
                 let targetText = target.innerHTML.split('');
                 let count = 0;
 
@@ -97,12 +97,12 @@
 </script>
 
 <style scoped>
-    #welcome_message {
+    #welcome-message {
         z-index: 100000;
         color: whitesmoke;
     }
 
-    #welcome_text_container {
+    #welcome-text-container {
         text-align: center;
         vertical-align: center;
         font-size: 2em;

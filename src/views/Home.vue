@@ -1,6 +1,6 @@
 <template lang="pug">
     div#home
-            div#content_container
+            div#content-container
                 LinkDisplay(ref="linkDisp")
                 WelcomeMessage(:welcomeMessage="welcomeMessage", :speed="speed", ref="welMsg")
                 div#routerLink
@@ -58,9 +58,13 @@
         transition: opacity 1.5s, background-color 1s;
     }
 
-    #content_container {
+    #content-container {
         z-index: 100000000;
         text-align: center;
+    }
+
+    #content-container.fadeout {
+        opacity: 0;
     }
     
     #routerLink {
@@ -87,9 +91,5 @@
 
     #projectLink.fadein {
         opacity: 1;
-    }
-    
-    #content_container.fadeout {
-        opacity: 0;
     }
 </style>
