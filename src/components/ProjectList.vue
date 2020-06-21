@@ -1,9 +1,9 @@
 <template>
     <div id="project-list">
         <ProjectListItem name="Portfolio" type="Front End Web" v-on:select-project="projectSelected"/>
-        <ProjectListItem name="Goose Café" type="Full Stack Web" v-on:select-project="projectSelected"/>
+        <ProjectListItem name="Goose" type="Full Stack Web" v-on:select-project="projectSelected"/>
         <ProjectListItem name="Tetris" type="Desktop" v-on:select-project="projectSelected"/>
-        <ProjectListItem name="Bash Shell" type="Desktop" v-on:select-project="projectSelected"/>
+        <ProjectListItem name="Shell" type="Desktop" v-on:select-project="projectSelected"/>
     </div>
 </template>
 
@@ -21,10 +21,11 @@
 <style scoped>
     #project-list {
         height: 100%;
-        width: 25%;
+        width: 24.75%;
         background: #1a1a1a;
-        border-right: black 2px solid;
-        margin-right: 0;
         display: inline-block;
+        position: absolute;
+        left: 0;
+        border-right: .25vw solid black;
     }
 </style>

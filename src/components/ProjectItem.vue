@@ -16,10 +16,9 @@
 <style scoped>
     #project-item {
         height: 100%;
-        width: 70%;
+        width: 75%;
         background: red;
-        border-right: black 2px solid;
-        display: inline-block;
-        top: 0;
+        position: absolute;
+        right: 0;
     }
 </style>

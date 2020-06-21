@@ -24,6 +24,7 @@
 <style scoped>
     #project-list-item {
         color: whitesmoke;
+        padding: .5em;
     }
 
     #project-list-item:hover {

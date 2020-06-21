@@ -1,7 +1,7 @@
 <template>
     <div id="projects">
         <ProjectList v-on:select-project="projectSelected" />
-        <ProjectItem :details="current" ref="projItem"/>
+        <ProjectItem :details="currentlySelected" ref="projItem"/>
     </div>
 </template>
 
@@ -14,25 +14,25 @@
         data() {
             return {
                 current: {},
-                portfolio: {
+                Portfolio: {
                     text: "hello this is the website",
                     tags: ["HTML", "CSS", "JS", "Vue.js"],
                     link: "linkgoeshere",
                     codelink: "codelinkgoeshere"
                 },
-                goosecafe: {
+                Goose: {
                     text: "this is goose cafe",
                     tags: ["HTML", "CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
                     link: "linkgoeshere",
                     codelink: "codelinkgoeshere"
                 },
-                tetris: {
+                Tetris: {
                     text: "this is my tetris clone",
                     tags: ["Scala", "Gradle"],
                     link: "linkgoeshere",
                     codelink: "codelinkgoeshere"
                 },
-                shell: {
+                Shell: {
                     text: "this was a fun shell project",
                     tags: ["C", "Bash"],
                     link: "linkgoeshere",
@@ -41,9 +41,10 @@
             }
         },
         methods: {
-            projectSelected: function (name) {
-                alert(name)
-            }
+            projectSelected: function (name) { this.current = this[name]; }
+        },
+        computed: {
+            currentlySelected: function () { return this.current; }
         }
     }
 </script>
