@@ -1,7 +1,7 @@
 <template>
     <div id="projects">
         <ProjectList v-on:select-project="projectSelected" />
-        <ProjectItem :details="currentlySelected" ref="projItem"/>
+        <ProjectItem v-bind="currentlySelected" ref="projItem"/>
     </div>
 </template>
 
@@ -15,28 +15,32 @@
             return {
                 current: {},
                 Portfolio: {
-                    text: "hello this is the website",
+                    text: "hello this is the website Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["HTML", "CSS", "JS", "Vue.js"],
                     link: "linkgoeshere",
-                    codelink: "codelinkgoeshere"
+                    codelink: "codelinkgoeshere",
+                    imgpath: "portfolio.png"
                 },
                 Goose: {
-                    text: "this is goose cafe",
+                    text: "this is goose cafe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["HTML", "CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
                     link: "linkgoeshere",
-                    codelink: "codelinkgoeshere"
+                    codelink: "codelinkgoeshere",
+                    imgpath: "goosecafe.png"
                 },
                 Tetris: {
-                    text: "this is my tetris clone",
+                    text: "this is my tetris clone Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["Scala", "Gradle"],
                     link: "linkgoeshere",
-                    codelink: "codelinkgoeshere"
+                    codelink: "codelinkgoeshere",
+                    imgpath: "tetris.png"
                 },
                 Shell: {
-                    text: "this was a fun shell project",
+                    text: "this was a fun shell project Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["C", "Bash"],
                     link: "linkgoeshere",
-                    codelink: "codelinkgoeshere"
+                    codelink: "codelinkgoeshere",
+                    imgpath: "turtleshell.jpg"
                 }
             }
         },
