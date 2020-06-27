@@ -22,7 +22,7 @@
     #project-list {
         height: 100%;
         width: 24.75%;
-        background: #1a1a1a;
+        background-color: rgba(0, 0, 0, .50);
         display: inline-block;
         position: absolute;
         left: 0;

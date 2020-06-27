@@ -1,7 +1,9 @@
 <template>
     <div id="project-list-item" v-on:click="projectSelected">
-        <h1> {{name}} </h1>
-        <h2> {{type}} </h2>
+        <div>
+            <h1> {{name}} </h1>
+            <h3> {{type}} </h3>
+        </div>
     </div>
 </template>
 
@@ -24,12 +26,16 @@
 <style scoped>
     #project-list-item {
         color: whitesmoke;
-        padding: .5em;
+        padding-left: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        display: flex;
+        align-items: center;
     }
-
+    
     #project-list-item:hover {
         cursor: pointer;
-        background-color: #333333;
+        background-color: rgba(255, 255, 255, .20);
     }
     
     h1 {

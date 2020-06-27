@@ -4,15 +4,22 @@
             <img :src="getImg" alt="image of the project"/>
         </div>
         <div id="tag-container">
+            <p id="tag-header">Technologies used: </p>
             <div id="tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
         </div>
         <div id="text-container">{{ text }}</div>
+        <div id="links-container">
+            <LinkButton :link=link text="View" class="link"></LinkButton>
+            <LinkButton :link=codelink  text="Code"></LinkButton>
+        </div>
     </div>
 </template>
 
 <script>
+    import LinkButton from "./LinkButton";
     export default {
         name: "ProjectItem",
+        components: {LinkButton},
         props: {
             text: String,
             tags: Array,
@@ -51,13 +58,21 @@
     img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
+        border: 2px solid whitesmoke;
+        border-radius: 1%;
     }
     
-    #tag-container {
+    #tag-container{
         width: 80%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 5vh;
+    }
+
+    #tag-header {
+        display: inline;
+        margin-left: 2.5vw;
     }
     
     #tag {
@@ -65,10 +80,15 @@
         margin-left: 2.5vw;
     }
     
-    #text-container {
+    #text-container, #links-container {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 5vh;
+    }
+    
+    #links-container {
+        display: flex;
+        justify-content: center;
     }
 </style>
