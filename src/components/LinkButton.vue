@@ -1,5 +1,5 @@
 <template>
-    <div class="link-button">{{ text }}</div>
+    <a class="link-button" target="_blank" :href=linkDestination>{{ text }}</a>
 </template>
 
 <script>
@@ -14,6 +14,9 @@
                 type: String,
                 required: true
             }
+        },
+        computed: {
+            linkDestination: function () { return this.link; }
         }
     }
 </script>

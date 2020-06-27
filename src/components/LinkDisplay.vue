@@ -9,8 +9,6 @@
 <script>
     export default {
         name: "LinkDisplay",
-        mounted() {
-        },
         methods: {
             introLinks: function () {
                 setTimeout(function () {document.getElementById("icn1").classList.toggle("fade")}, 0);
@@ -24,7 +22,9 @@
 <style scoped>
     #link-display {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .icon {
@@ -32,8 +32,6 @@
         color: whitesmoke;
         height: 2em;
         width: 2em;
-        margin-left: 2.5vw;
-        margin-right: 2.5vw;
         cursor: pointer;
         opacity: 0;
         -webkit-transition: opacity 1s, color 0.5s;

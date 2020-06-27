@@ -33,6 +33,15 @@
                 if (this.imgpath === undefined) { return; }
                 return require('../assets/' + this.imgpath);
             }
+        },
+        mounted() { this.introDisplay() },
+        methods: {
+            introDisplay: function () {
+                setTimeout(function () {document.getElementById("img-container").classList.toggle("fade")}, 200);
+                setTimeout(function () {document.getElementById("tag-container").classList.toggle("fade")}, 300);
+                setTimeout(function () {document.getElementById("text-container").classList.toggle("fade")}, 400);
+                setTimeout(function () {document.getElementById("links-container").classList.toggle("fade")}, 600);
+            }
         }
     }
 </script>
@@ -90,5 +99,16 @@
     #links-container {
         display: flex;
         justify-content: center;
+    }
+
+    #img-container, #tag-container, #text-container, #links-container {
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        transition: opacity 1s;
+    }
+
+    #img-container.fade, #tag-container.fade, #text-container.fade, #links-container.fade {
+        opacity: 1;
     }
 </style>

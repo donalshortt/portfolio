@@ -24,7 +24,7 @@
                 Goose: {
                     text: "this is goose cafe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["HTML", "CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
-                    link: "goose.cafe",
+                    link: "http://goose.cafe",
                     imgpath: "goosecafe.png"
                 },
                 Tetris: {
