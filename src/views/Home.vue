@@ -23,10 +23,11 @@
                 sessionStorage.setItem("animated" , "true");
             }, animateDelay);
         },
-        activated() {
-            if (sessionStorage.getItem("animated") !== null) {
-                document.getElementById("projectLink").style.opacity = 1;
-            }
+        deactivated() {
+            document.getElementById("projectLink").style.opacity = 1;
+            document.getElementById("icn1").style.opacity = 1;
+            document.getElementById("icn2").style.opacity = 1;
+            document.getElementById("icn3").style.opacity = 1;
         },
         data() {
             return {

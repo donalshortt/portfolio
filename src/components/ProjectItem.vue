@@ -34,13 +34,12 @@
                 return require('../assets/' + this.imgpath);
             }
         },
-        mounted() { this.introDisplay() },
         methods: {
             introDisplay: function () {
-                setTimeout(function () {document.getElementById("img-container").classList.toggle("fade")}, 200);
-                setTimeout(function () {document.getElementById("tag-container").classList.toggle("fade")}, 300);
-                setTimeout(function () {document.getElementById("text-container").classList.toggle("fade")}, 400);
-                setTimeout(function () {document.getElementById("links-container").classList.toggle("fade")}, 600);
+                setTimeout(function () {document.getElementById("img-container").classList.toggle("fade")}, 0);
+                setTimeout(function () {document.getElementById("tag-container").classList.toggle("fade")}, 100);
+                setTimeout(function () {document.getElementById("text-container").classList.toggle("fade")}, 300);
+                setTimeout(function () {document.getElementById("links-container").classList.toggle("fade")}, 400);
             }
         }
     }

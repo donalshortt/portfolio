@@ -49,6 +49,8 @@
         },
         mounted() {
             this.current = this.Portfolio;
+            setTimeout(this.$refs.projItem.introDisplay(), 5000);
+            setTimeout(this.$refs.projList.initialiseList(), 5000);
         }
     }
 </script>

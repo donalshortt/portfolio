@@ -19,11 +19,14 @@
     export default {
         name: "ProjectList",
         components: {LinkDisplay, ProjectListItem},
-        mounted: function() {
-            this.$refs.linkDisp.introLinks();
+        mounted() {
+            console.log("ProjectList Mounted")
         },
         methods: {
-            projectSelected: function (name) { this.$emit("select-project", name); }
+            projectSelected: function (name) { this.$emit("select-project", name); },
+            initialiseList: function () {
+                console.log("I have been calledleld");
+                this.$refs.linkDisp.introLinks(); }
         }
     }
 </script>

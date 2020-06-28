@@ -1,8 +1,8 @@
 <template>
     <div id="link-display">
-        <font-awesome-icon :icon="['fab', 'github-square']" class="icon" id="icn1"/>
-        <font-awesome-icon :icon="['fab', 'linkedin']" class="icon" id="icn2"/>
-        <font-awesome-icon :icon="['far', 'address-book']" class="icon" id="icn3"/>
+        <font-awesome-icon :icon="['fab', 'github-square']" class="icon icn1" id="icn1"/>
+        <font-awesome-icon :icon="['fab', 'linkedin']" class="icon icn2" id="icn2"/>
+        <font-awesome-icon :icon="['far', 'address-book']" class="icon icn3" id="icn3"/>
     </div>
 </template>
 
@@ -11,6 +11,7 @@
         name: "LinkDisplay",
         methods: {
             introLinks: function () {
+                console.log("LinkDisplay called");
                 setTimeout(function () {document.getElementById("icn1").classList.toggle("fade")}, 0);
                 setTimeout(function () {document.getElementById("icn2").classList.toggle("fade")}, 250);
                 setTimeout(function () {document.getElementById("icn3").classList.toggle("fade")}, 500);
