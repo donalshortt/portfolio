@@ -11,7 +11,6 @@
         name: "LinkDisplay",
         methods: {
             introLinks: function () {
-                console.log("LinkDisplay called");
                 setTimeout(function () {document.getElementById("icn1").classList.toggle("fade")}, 0);
                 setTimeout(function () {document.getElementById("icn2").classList.toggle("fade")}, 250);
                 setTimeout(function () {document.getElementById("icn3").classList.toggle("fade")}, 500);

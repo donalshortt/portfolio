@@ -1,6 +1,6 @@
 <template>
     <div id="projects">
-        <ProjectList v-on:select-project="projectSelected" />
+        <ProjectList v-on:select-project="projectSelected" ref="projList"/>
         <ProjectItem v-bind="currentlySelected" ref="projItem"/>
     </div>
 </template>
@@ -25,18 +25,21 @@
                     text: "this is goose cafe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["HTML", "CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
                     link: "http://goose.cafe",
+                    codelink: "unavailable",
                     imgpath: "goosecafe.png"
                 },
                 Tetris: {
                     text: "this is my tetris clone Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["Scala", "Gradle"],
+                    link: "unavailable",
                     codelink: "https://github.com/donalshortt/tetris",
                     imgpath: "tetris.png"
                 },
                 Shell: {
                     text: "this was a fun shell project Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
                     tags: ["C", "Bash"],
-                    codelink: "codelinkgoeshere",
+                    link: "unavailable",
+                    codelink: "https://github.com/donalshortt/shell",
                     imgpath: "turtleshell.jpg"
                 }
             }
@@ -49,8 +52,8 @@
         },
         mounted() {
             this.current = this.Portfolio;
-            setTimeout(this.$refs.projItem.introDisplay(), 5000);
-            setTimeout(this.$refs.projList.initialiseList(), 5000);
+            this.$refs.projItem.introDisplay();
+            this.$refs.projList.initialiseList();
         }
     }
 </script>

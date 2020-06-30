@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
     let self;
     export default {
         name: "WelcomeMessage",

@@ -6,17 +6,27 @@
     export default {
         name: "LinkButton",
         props: {
-            link: {
-                type: String,
-                required: true
-            },
+            link: String,
             text: {
                 type: String,
                 required: true
             }
         },
+        mounted() { this.checkAvailable(); },
         computed: {
             linkDestination: function () { return this.link; }
+        },
+        methods: {
+            checkAvailable: function () {
+                if (this.link === "unavailable" && !this.$el.classList.contains("unavailable")) {
+                    this.$el.classList.toggle("unavailable");
+                } else if (this.link !== "unavailable" && this.$el.classList.contains("unavailable")) {
+                    this.$el.classList.toggle("unavailable");
+                }
+            }
+        },
+        watch: {
+            link: function () { this.checkAvailable() }
         }
     }
 </script>
@@ -36,6 +46,11 @@
         margin-left: 5%;
         margin-right: 5%;
         display: inline-block;
+    }
+
+    .link-button.unavailable {
+        opacity: .25;
+        pointer-events: none;
     }
 
     .link-button:hover {

@@ -2,9 +2,9 @@
     <div id="project-list">
         <div id="back-link-container">
             <a href="/#/">Back</a>
-            <def id="link-display-container">
+            <div id="link-display-container">
                 <LinkDisplay ref="linkDisp"></LinkDisplay>
-            </def>
+            </div>
         </div>
         <ProjectListItem name="Portfolio" type="Front End Web" v-on:select-project="projectSelected"/>
         <ProjectListItem name="Goose" type="Full Stack Web" v-on:select-project="projectSelected"/>
@@ -19,13 +19,9 @@
     export default {
         name: "ProjectList",
         components: {LinkDisplay, ProjectListItem},
-        mounted() {
-            console.log("ProjectList Mounted")
-        },
         methods: {
             projectSelected: function (name) { this.$emit("select-project", name); },
             initialiseList: function () {
-                console.log("I have been calledleld");
                 this.$refs.linkDisp.introLinks(); }
         }
     }

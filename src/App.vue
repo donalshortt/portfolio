@@ -2,9 +2,8 @@
     div#app
         video(autoplay muted loop)
             source(src="./assets/outputCityscape1000.mp4" type="video/mp4")
-        transition(name="fade")
-            keep-alive
-                router-view
+        keep-alive
+            router-view
 </template>
 
 <script>

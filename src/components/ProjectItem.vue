@@ -9,7 +9,7 @@
         </div>
         <div id="text-container">{{ text }}</div>
         <div id="links-container">
-            <LinkButton :link=link text="View" class="link"></LinkButton>
+            <LinkButton :link=link text="View"></LinkButton>
             <LinkButton :link=codelink  text="Code"></LinkButton>
         </div>
     </div>
