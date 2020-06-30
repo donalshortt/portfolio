@@ -35,7 +35,7 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        border-right: .25vw solid black;
+        /*border-right: .25vw solid black;*/
     }
 
     #back-link-container {
@@ -73,5 +73,12 @@
         color: #0047b3;
         background-color: whitesmoke;
         cursor: pointer;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #project-list {
+            width: 100%;   
+            border-right: none;
+        }
     }
 </style>

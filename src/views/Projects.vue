@@ -45,7 +45,10 @@
             }
         },
         methods: {
-            projectSelected: function (name) { this.current = this[name]; }
+            projectSelected: function (name) { 
+                this.current = this[name]; 
+                document.getElementById("project-item").style.display = "initial";
+            }
         },
         computed: {
             currentlySelected: function () { return this.current; }

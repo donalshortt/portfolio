@@ -2,7 +2,7 @@
     <div id="project-list-item" v-on:click="projectSelected">
         <div>
             <h1> {{name}} </h1>
-            <h3> {{type}} </h3>
+            <h3> {{type}}<span class="underscore">_</span> </h3>
         </div>
     </div>
 </template>
@@ -24,6 +24,8 @@
 </script>
 
 <style scoped>
+    @import "../../src/assets/css/underscoreAnimation.css";
+    
     #project-list-item {
         color: whitesmoke;
         padding-left: 10%;
@@ -31,6 +33,12 @@
         padding-bottom: 5%;
         display: flex;
         align-items: center;
+    }
+    
+    #project-list-item:hover .underscore {
+        animation: blinkingUnderscore .5s infinite;
+        -webkit-animation: blinkingUnderscore .5s infinite;
+        -moz-animation: blinkingUnderscore .5s infinite;
     }
     
     #project-list-item:hover {

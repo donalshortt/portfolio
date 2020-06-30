@@ -53,6 +53,7 @@
         position: absolute;
         right: 0;
         padding-left: 3em;
+        overflow-y: auto;
     }
     
     #img-container {
@@ -109,5 +110,12 @@
 
     #img-container.fade, #tag-container.fade, #text-container.fade, #links-container.fade {
         opacity: 1;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #project-item {
+            display: none;
+            width: 95%;
+        }
     }
 </style>

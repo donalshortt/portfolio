@@ -1,0 +1,16 @@
+@-webkit-keyframes blinkingUnderscore {
+    50% {opacity: 1}
+}
+@-moz-keyframes blinkingUnderscore {
+    50% {opacity: 1}
+}
+@keyframes blinkingUnderscore {
+    50% {opacity: 1}
+}
+
+.underscore {
+    color: inherit;
+    size: 1.5em;
+    opacity: 0;
+    transition: none;
+}
