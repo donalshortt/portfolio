@@ -1,7 +1,8 @@
 <template lang="pug">
     div#home
         div#content-container
-            LinkDisplay(ref="linkDisp")
+            div#link-display-container
+                LinkDisplay(ref="linkDisp")
             WelcomeMessage(:welcomeMessage="welcomeMessage", :speed="speed", ref="welMsg")
             div#routerLink
                 router-link(to="../projects" id="projectLink") Projects
@@ -54,13 +55,18 @@
         transition: opacity 1.5s, background-color 1s;
     }
 
+    #link-display-container {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
     #content-container {
         z-index: 100000000;
         text-align: center;
     }
     
     #routerLink {
-        margin-top: 4vh;
+        margin-top: 6vh;
         opacity: 0;
     }
 
@@ -83,5 +89,11 @@
 
     #routerLink.fade {
         opacity: 1;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #home {
+            font-size: .75em;
+        }
     }
 </style>

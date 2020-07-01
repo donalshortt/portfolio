@@ -30,12 +30,12 @@
 <style scoped>
     #project-list {
         height: 100%;
-        width: 24.75%;
+        width: 25%;
         background-color: rgba(0, 0, 0, .50);
         display: inline-block;
         position: absolute;
         left: 0;
-        /*border-right: .25vw solid black;*/
+        overflow-y: auto;
     }
 
     #back-link-container {
@@ -78,7 +78,6 @@
     @media only screen and (max-width: 600px) {
         #project-list {
             width: 100%;   
-            border-right: none;
         }
     }
 </style>

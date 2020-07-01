@@ -1,8 +1,8 @@
 <template>
     <div id="link-display">
-        <font-awesome-icon :icon="['fab', 'github-square']" class="icon icn1" id="icn1"/>
-        <font-awesome-icon :icon="['fab', 'linkedin']" class="icon icn2" id="icn2"/>
-        <font-awesome-icon :icon="['far', 'address-book']" class="icon icn3" id="icn3"/>
+        <font-awesome-icon :icon="['fab', 'github-square']" class="icon" id="icn1"/>
+        <font-awesome-icon :icon="['fab', 'linkedin']" class="icon" id="icn2"/>
+        <font-awesome-icon :icon="['far', 'address-book']" class="icon" id="icn3"/>
     </div>
 </template>
 
@@ -64,5 +64,12 @@
         0%,
         100% { transform: translateY(0); }
         50% { transform: translateY(-10px); }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .icon {
+            width: 2.5em;
+            height: 2.5em;
+        }
     }
 </style>

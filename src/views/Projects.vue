@@ -15,28 +15,28 @@
             return {
                 current: {},
                 Portfolio: {
-                    text: "hello this is the website Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
+                    text: "This website! Built to showcase projects I'm proud of.",
                     tags: ["HTML", "CSS", "JS", "Vue.js"],
                     link: "https://donalshortt.github.io/",
                     codelink: "https://github.com/donalshortt/portfolio",
                     imgpath: "portfolio.png"
                 },
                 Goose: {
-                    text: "this is goose cafe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
-                    tags: ["HTML", "CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
+                    text: "Goose Cafe is a lunch cafe located in Dublin, Ireland. It features a responsive, interactive UI and a custom built online ordering system.",
+                    tags: ["HTML/CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
                     link: "http://goose.cafe",
                     codelink: "unavailable",
                     imgpath: "goosecafe.png"
                 },
                 Tetris: {
-                    text: "this is my tetris clone Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
+                    text: "A simple Tetris clone built in Scala. Game development is a passion of mine and I expect this portfolio to be filled with similar side projects soon.",
                     tags: ["Scala", "Gradle"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/tetris",
                     imgpath: "tetris.png"
                 },
                 Shell: {
-                    text: "this was a fun shell project Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis purus in augue tincidunt, non scelerisque velit varius. Suspendisse volutpat ipsum non ipsum euismod rutrum. Cras vitae euismod arcu, a ultricies risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus egestas sem, in pulvinar est. Curabitur consectetur libero ut enim elementum, non feugiat ipsum feugiat. Etiam finibus velit ac nisl imperdiet elementum.",
+                    text: "A stripped down version of the BASH shell. I learned a lot about how operating systems work while working on this. In particular how Linux handles processes and the linux kernel's memory management solution.",
                     tags: ["C", "Bash"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/shell",
@@ -45,9 +45,14 @@
             }
         },
         methods: {
-            projectSelected: function (name) { 
+            projectSelected: function (name) {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+
+                if (vw < 600) { document.getElementById("project-list").style.display = "none"; }
+
                 this.current = this[name]; 
                 document.getElementById("project-item").style.display = "initial";
+                document.getElementById("")
             }
         },
         computed: {

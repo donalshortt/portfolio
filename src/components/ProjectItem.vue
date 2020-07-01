@@ -1,5 +1,8 @@
 <template>
     <div id="project-item">
+        <div id="back-button" v-on:click="back">
+            <font-awesome-icon :icon="['fas', 'arrow-left']"/>
+        </div>
         <div id="img-container">
             <img :src="getImg" alt="image of the project"/>
         </div>
@@ -40,6 +43,10 @@
                 setTimeout(function () {document.getElementById("tag-container").classList.toggle("fade")}, 100);
                 setTimeout(function () {document.getElementById("text-container").classList.toggle("fade")}, 300);
                 setTimeout(function () {document.getElementById("links-container").classList.toggle("fade")}, 400);
+            },
+            back: function () {
+                this.$el.style.display = "none";
+                document.getElementById("project-list").style.display = "initial";
             }
         }
     }
@@ -52,8 +59,24 @@
         color: whitesmoke;
         position: absolute;
         right: 0;
-        padding-left: 3em;
         overflow-y: auto;
+    }
+
+    #back-button {
+        position: fixed;
+        background:
+                linear-gradient(to top left,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0) calc(50% - 0.8px),
+                rgba(255,255,255,1) 50%,
+                rgba(0,0,0,.75) calc(50% + 0.8px),
+                rgba(0,0,0,.75) 100%);
+        height: 2em;
+        width: 2em;
+        padding: .75em;
+        top: 0;
+        left: 0;
+        display: none;
     }
     
     #img-container {
@@ -77,6 +100,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 5vh;
+        line-height: 200%;
     }
 
     #tag-header {
@@ -115,7 +139,19 @@
     @media only screen and (max-width: 600px) {
         #project-item {
             display: none;
-            width: 95%;
+            width: 100vw;
+        }
+
+        #back-button {
+            display: initial;
+        }
+
+        #tag-header {
+            margin: 0;
+        }
+
+        #tag {
+            display: block;
         }
     }
 </style>
