@@ -12,8 +12,8 @@
         </div>
         <div id="text-container">{{ text }}</div>
         <div id="links-container">
-            <LinkButton :link=link text="View"></LinkButton>
-            <LinkButton :link=codelink  text="Code"></LinkButton>
+            <LinkButton :link=link text="View" class="link"></LinkButton>
+            <LinkButton :link=codelink  text="Code" class="link"></LinkButton>
         </div>
     </div>
 </template>
@@ -105,11 +105,9 @@
 
     #tag-header {
         display: inline;
-        margin-left: 2.5vw;
     }
     
     #tag {
-        display: inline;
         margin-left: 2.5vw;
     }
     
@@ -136,6 +134,10 @@
         opacity: 1;
     }
 
+    .link {
+        margin-bottom: 5vh;
+    }
+
     @media only screen and (max-width: 600px) {
         #project-item {
             display: none;
@@ -144,14 +146,6 @@
 
         #back-button {
             display: initial;
-        }
-
-        #tag-header {
-            margin: 0;
-        }
-
-        #tag {
-            display: block;
         }
     }
 </style>

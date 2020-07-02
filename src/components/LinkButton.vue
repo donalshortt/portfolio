@@ -1,6 +1,8 @@
 <template>
     <div class="link-button">
-        <a class="button" target="_blank" :href=linkDestination>{{ text }}<span class="underscore">_</span></a>
+        <div class="button-container">
+            <a class="button" target="_blank" :href=linkDestination><span class="link-text">{{ text }}<span class="underscore">_</span></span></a>
+        </div>
         <div class="link-tab"></div>
     </div>
 </template>
@@ -39,33 +41,36 @@
     @import "../../src/assets/css/underscoreAnimation.css";
     
     .link-button {
-        width: 7.5%;
-        height: 40%;
+        width: 11.5%;
+        height: 5em;
         margin-left: 5%;
         margin-right: 5%;
         display: flex;
         flex-flow: column nowrap;
     }
 
-    .link-button:hover .underscore {
+    .button-container:hover .underscore {
         animation: blinkingUnderscore .5s infinite;
         -webkit-animation: blinkingUnderscore .5s infinite;
         -moz-animation: blinkingUnderscore .5s infinite;
     }
-    
-    .button {
+
+    .button-container {
         border: 2px solid whitesmoke;
-        color: whitesmoke;
-        text-decoration: none;
-        padding: 1em;
-        padding-bottom: 2em;
         border-radius: 5%;
+        height: 90%;
         width: 100%;
-        height: 200%;
-        display: block;
         -webkit-transition: color 0.5s, background-color 0.5s, border-color 0.5s;
         -moz-transition: color 0.5s, background-color 0.5s, border-color 0.5s;
         transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+    }
+    
+    .button {
+        color: whitesmoke;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
     }
 
     .link-button.unavailable {
@@ -73,21 +78,27 @@
         pointer-events: none;
     }
 
-    .button:hover {
+    .link-text {
+        display: inline-block;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+    .button-container:hover {
         border-color: #0047b3;
         color: #0047b3;
-        background-color: rgba(245,245,245, 1);
+        background-color: rgba(0,0,0, .5);
         cursor: pointer;
     }
     
-    .button:hover + .link-tab {
+    .button-container:hover + .link-tab {
         border-color: #0047b3;
     }
     
     .link-tab {
-        width: 1.5em;
-        height: .45em;
-        margin-left: 95%;
+        width: 20%;
+        height: 10%;
+        margin-left: 70%;
         border-top-left-radius: 25%;
         border-top-right-radius: 25%;
         border-top: 2px solid whitesmoke;
@@ -98,5 +109,11 @@
         -webkit-transition: border-color 0.5s;
         -moz-transition:border-color 0.5s;
         transition: border-color 0.5s;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .link-button {
+            width: 35%;
+        }
     }
 </style>
