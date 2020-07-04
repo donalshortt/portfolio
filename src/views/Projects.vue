@@ -36,7 +36,7 @@
                     imgpath: "tetris.png"
                 },
                 Shell: {
-                    text: "A stripped down version of the BASH shell. I learned a lot about how operating systems work while working on this. In particular how Linux handles processes and the linux kernel's memory management solution.",
+                    text: "A stripped down version of the BASH shell. I learned a lot about how operating systems work while working on this. In particular how Linux handles processes.",
                     tags: ["C", "Bash"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/shell",
