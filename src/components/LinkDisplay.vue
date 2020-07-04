@@ -1,8 +1,8 @@
 <template>
     <div id="link-display">
-        <font-awesome-icon :icon="['fab', 'github-square']" class="icon" id="icn1"/>
-        <font-awesome-icon :icon="['fab', 'linkedin']" class="icon" id="icn2"/>
-        <font-awesome-icon :icon="['far', 'address-book']" class="icon" id="icn3"/>
+        <font-awesome-icon @click="goGithub" :icon="['fab', 'github-square']" class="icon" id="icn1"/>
+        <font-awesome-icon @click="goLinkedin" :icon="['fab', 'linkedin']" class="icon" id="icn2"/>
+        <font-awesome-icon @click="goResume" :icon="['far', 'address-book']" class="icon" id="icn3"/>
     </div>
 </template>
 
@@ -14,7 +14,10 @@
                 setTimeout(function () { document.getElementById("icn1").classList.toggle("fade") }, 0);
                 setTimeout(function () { document.getElementById("icn2").classList.toggle("fade") }, 250);
                 setTimeout(function () { document.getElementById("icn3").classList.toggle("fade") }, 500);
-            }
+            },
+            goGithub: function () { window.open("https://github.com/donalshortt") },
+            goLinkedin: function () { window.open("https://www.linkedin.com/in/donal-shortt-3bb02b135/") },
+            goResume: function () { window.open("https://docs.google.com/document/d/1_gA6zYsEqdzCxeL5aYghoFjKuqJC123-fET68Ad0mSU/edit?usp=sharing") }
         }
     }
 </script>

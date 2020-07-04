@@ -16,14 +16,14 @@
                 current: {},
                 Portfolio: {
                     text: "This website! Built to showcase projects I'm proud of.",
-                    tags: ["HTML", "CSS", "JS", "Vue.js"],
+                    tags: ["HTML", "CSS", "Javascript", "Vue.js"],
                     link: "https://donalshortt.github.io/",
                     codelink: "https://github.com/donalshortt/portfolio",
                     imgpath: "portfolio.png"
                 },
                 Goose: {
                     text: "Goose Cafe is a lunch cafe located in Dublin, Ireland. It features a responsive, interactive UI and a custom built online ordering system.",
-                    tags: ["HTML/CSS", "JS", "JQuery", "Pug", "Node.js", "Paypal API"],
+                    tags: ["HTML/CSS", "Javascript", "JQuery", "Pug", "Node.js", "Paypal API"],
                     link: "http://goose.cafe",
                     codelink: "unavailable",
                     imgpath: "goosecafe.png"
@@ -40,7 +40,7 @@
                     tags: ["C", "Bash"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/shell",
-                    imgpath: "turtleshell.jpg"
+                    imgpath: "myshell.png"
                 }
             }
         },

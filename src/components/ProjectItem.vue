@@ -62,6 +62,22 @@
         overflow-y: auto;
     }
 
+    #project-item::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,.8)
+    }
+
+    #project-item::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    #project-item::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #1a1a1a;
+    }
+
     #back-button {
         position: fixed;
         background:

@@ -21,8 +21,7 @@
         components: {LinkDisplay, ProjectListItem},
         methods: {
             projectSelected: function (name) { this.$emit("select-project", name); },
-            initialiseList: function () {
-                this.$refs.linkDisp.introLinks(); }
+            initialiseList: function () { this.$refs.linkDisp.introLinks(); }
         }
     }
 </script>
@@ -56,9 +55,9 @@
         text-decoration: none;
         padding: 1em;
         border-radius: 5%;
-        -webkit-transition: opacity 1.5s;
-        -moz-transition: opacity 1.5s;
-        transition: opacity 1.5s;
+        -webkit-transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+        -moz-transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+        transition: color 0.5s, background-color 0.5s, border-color 0.5s;
         width: 15%;
         height: .7em;
         display: inline-flex;

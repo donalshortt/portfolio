@@ -68,6 +68,9 @@
     #routerLink {
         margin-top: 6vh;
         opacity: 0;
+        -webkit-transition: opacity 1.5s, background-color 1s;
+        -moz-transition: opacity 1.5s, background-color 1s;
+        transition: opacity 1.5s, background-color 1s;
     }
 
     #projectLink {
@@ -76,9 +79,9 @@
         text-decoration: none;
         padding: 1em;
         border-radius: 5%;
-        -webkit-transition: opacity 1.5s;
-        -moz-transition: opacity 1.5s;
-        transition: opacity 1.5s;
+        -webkit-transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+        -moz-transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+        transition: color 0.5s, background-color 0.5s, border-color 0.5s;
     }
 
     #projectLink:hover {
