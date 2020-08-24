@@ -19,28 +19,28 @@
                     tags: ["HTML", "CSS", "Javascript", "Vue.js"],
                     link: "https://donalshortt.github.io/",
                     codelink: "https://github.com/donalshortt/portfolio",
-                    imgpath: "portfolio.png"
+                    imgpath: "portfolio.jpg"
                 },
                 Goose: {
                     text: "Goose Cafe is a lunch cafe located in Dublin, Ireland. It features a responsive, interactive UI and a custom built online ordering system.",
                     tags: ["HTML/CSS", "Javascript", "JQuery", "Pug", "Node.js", "Paypal API"],
-                    link: "http://goose.cafe",
+                    link: "https://goose.cafe",
                     codelink: "unavailable",
-                    imgpath: "goosecafe.png"
+                    imgpath: "goosecafe.jpg"
                 },
                 Tetris: {
                     text: "A simple Tetris clone built in Scala. Game development is a passion of mine and I expect this portfolio to be filled with similar side projects soon.",
                     tags: ["Scala", "Gradle"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/tetris",
-                    imgpath: "tetris.png"
+                    imgpath: "tetris.jpg"
                 },
                 Shell: {
                     text: "A stripped down version of the BASH shell. I learned a lot about how operating systems work while working on this. In particular how Linux handles processes.",
                     tags: ["C", "Bash"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/shell",
-                    imgpath: "myshell.png"
+                    imgpath: "myshell.jpg"
                 }
             }
         },

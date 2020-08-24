@@ -1,7 +1,7 @@
 <template lang="pug">
     div#app
         video(autoplay muted loop)
-            source(src="./assets/outputCityscape1000.mp4" type="video/mp4")
+            source(src="./assets/cityscape.mp4" type="video/mp4")
         keep-alive
             router-view
 </template>
