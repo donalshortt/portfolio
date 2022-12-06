@@ -23,13 +23,13 @@
                 },
                 Goose: {
                     text: "Goose Cafe is a lunch cafe located in Dublin, Ireland. It features a responsive, interactive UI and a custom built online ordering system.",
-                    tags: ["HTML/CSS", "Javascript", "JQuery", "Pug", "Node.js", "Paypal API"],
+                    tags: ["HTML/CSS", "Javascript", "JQuery", "Pug", "Node.js"],
                     link: "https://goose.cafe",
                     codelink: "unavailable",
                     imgpath: "goosecafe.jpg"
                 },
                 Tetris: {
-                    text: "A simple Tetris clone built in Scala. Game development is a passion of mine and I expect this portfolio to be filled with similar side projects soon.",
+                    text: "A simple Tetris clone built in Scala.",
                     tags: ["Scala", "Gradle"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/tetris",
