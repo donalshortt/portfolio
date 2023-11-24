@@ -16,7 +16,7 @@
                 current: {},
                 Portfolio: {
                     text: "This website! Built to showcase projects I'm proud of.",
-                    tags: ["HTML", "CSS", "Javascript", "Vue.js"],
+                    tags: ["Vue.js"],
                     link: "https://donalshortt.github.io/",
                     codelink: "https://github.com/donalshortt/portfolio",
                     imgpath: "portfolio.jpg"
@@ -30,7 +30,7 @@
                 },
                 Tetris: {
                     text: "A simple Tetris clone built in Scala.",
-                    tags: ["Scala", "Gradle"],
+                    tags: ["Scala"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/tetris",
                     imgpath: "tetris.jpg"
@@ -41,7 +41,21 @@
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/shell",
                     imgpath: "myshell.jpg"
-                }
+                },
+				Kernel: {
+					text: "A very simple x86_64 kernel. Built to help test the relative ease of performing transient execution attacks in a low noise environment. Includes examples of how to perform Flush+Reload and SpectreV1",
+					tags: ["C"],
+					link: "unavailable",
+					codelink: "https://github.com/donalshorttmicrocosmOS",
+					imgpath: "kernel.jpg"
+				},
+				MoC: {
+					text: "A savefile parser and web application that parses and uploads players scores in realtime to a website. Once on the website, an administrator can add score modifiers to the players' score using the online dashboard in order to provide more interesting and dynamic Europa Universalis IV multiplayer games.",
+					tags: ["Rust", "Node.js", "Vue.js"],
+					link: "unavailable",
+					codelink: "https://github.com/donalshortt/moc",
+					imgpath: ""
+				}
             }
         },
         methods: {
