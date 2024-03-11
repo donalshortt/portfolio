@@ -17,7 +17,7 @@
             },
             goGithub: function () { window.open("https://github.com/donalshortt") },
             goLinkedin: function () { window.open("https://www.linkedin.com/in/donal-shortt-3bb02b135/") },
-            goResume: function () { window.open("https://docs.google.com/document/d/1_gA6zYsEqdzCxeL5aYghoFjKuqJC123-fET68Ad0mSU/edit?usp=sharing") }
+            goResume: function () { window.open("https://docs.google.com/document/d/1E2ZiC9xm7auW2if1nGCQfOkCdb1ggZ9UqYu6IqxpWl8/edit?usp=sharing") }
         }
     }
 </script>

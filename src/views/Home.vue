@@ -13,6 +13,7 @@
     import LinkDisplay from "../components/LinkDisplay";
     
     export default {
+		// eslint-disable-next-line
         name: "Home",
         components: {LinkDisplay, WelcomeMessage},
         mounted() {
