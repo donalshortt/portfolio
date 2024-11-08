@@ -29,12 +29,12 @@
                     codelink: "unavailable",
                     imgpath: "goosecafe.jpg"
                 },
-                Tetris: {
-                    text: "A simple Tetris clone built in Scala.",
-                    tags: ["Scala", "Gradle"],
+                RevolVR: {
+                    text: "RevolVR is a prototype game made for VR using Unity to explore evolutionary outcomes when a human is directly involved in the evolutionary process.",
+                    tags: ["C#", "Python", "Unity"],
                     link: "unavailable",
-                    codelink: "unavailable",
-                    imgpath: "tetris.jpg"
+                    codelink: "https://github.com/donalshortt/RevolVR",
+                    imgpath: "revolvr.jpg"
                 },
                 Shell: {
                     text: "A stripped down version of the BASH shell. I learned a lot about how operating systems work while working on this. In particular how Linux handles processes.",
@@ -44,7 +44,7 @@
                     imgpath: "myshell.jpg"
                 },
 				Kernel: {
-					text: "A simple kernel made for the x86_64 architecture. Made to demonstrate the relative ease one can perform transient execution attacks in a low noise environment. Two attack examples are included, Flush+Reload & SpectreV1.",
+					text: "A simple kernel made from scratch for the x86_64 architecture. Made to demonstrate the relative ease one can perform transient execution attacks in a low noise environment. Two attack examples are included, Flush+Reload & SpectreV1.",
 					tags: ["C", "Assembly"],
 					link:"unavailable",
 					codelink: "https://github.com/donalshortt/microcosmOS",
