@@ -8,7 +8,7 @@
         </div>
         <ProjectListItem name="Portfolio" type="Front End Web" v-on:select-project="projectSelected"/>
         <ProjectListItem name="Goose" type="Full Stack Web" v-on:select-project="projectSelected"/>
-        <ProjectListItem name="Tetris" type="Desktop" v-on:select-project="projectSelected"/>
+        <ProjectListItem name="RevolVR" type="Desktop" v-on:select-project="projectSelected"/>
         <ProjectListItem name="Shell" type="Desktop" v-on:select-project="projectSelected"/>
 		<ProjectListItem name="Kernel" type="OS" v-on:select-project="projectSelected"/>
 		<ProjectListItem name="MoC" type="Desktop" v-on:select-project="projectSelected"/>

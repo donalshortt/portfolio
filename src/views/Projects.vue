@@ -31,7 +31,7 @@
                 },
                 RevolVR: {
                     text: "RevolVR is a prototype game made for VR using Unity to explore evolutionary outcomes when a human is directly involved in the evolutionary process.",
-                    tags: ["C#", "Python", "Unity"],
+                    tags: ["C#", "Python", "Unity", "C++"],
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/RevolVR",
                     imgpath: "revolvr.jpg"
