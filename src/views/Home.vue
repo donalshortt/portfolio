@@ -28,7 +28,7 @@
         },
         data() {
             return {
-                welcomeMessage: ["HEY I'M DONAL", "I'M A STUDENT DEVELOPER.", "BORN IN IRELAND", "LIVING IN", "AMSTERDAM", "AVAILABLE TO", "YOU :)"],
+                welcomeMessage: ["HEY I'M DONAL", "I'M A SOFTWARE DEVELOPER.", "BORN IN IRELAND", "LIVING IN", "AMSTERDAM", "AVAILABLE TO", "YOU :)"],
                 speed: 50,
             }
         },
