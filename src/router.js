@@ -1,21 +1,24 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home";
-import Projects from "./views/Projects";
+// router.js or router/index.js
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from './views/Home.vue';
+import Projects from './views/Projects.vue';
 
-Vue.use(Router);
+const routes = [
+    {
+        path: '/',
+        name: 'home',
+        component: Home,
+    },
+    {
+        path: '/projects',
+        name: 'projects',
+        component: Projects,
+    },
+];
 
-export default new Router({
-    routes: [
-        {
-            path: "/",
-            name: "home",
-            component: Home
-        },
-        {
-            path: "/projects",
-            name: "projects",
-            component: Projects
-        }
-    ]
-})
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
+
+export default router;

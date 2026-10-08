@@ -9,6 +9,7 @@
     import ProjectList from "../components/ProjectList";
     import ProjectItem from "../components/ProjectItem";
     export default {
+		// eslint-disable-next-line
         name: "Projects",
         components: {ProjectItem, ProjectList},
         data() {
@@ -22,18 +23,18 @@
                     imgpath: "portfolio.jpg"
                 },
                 Goose: {
-                    text: "Goose Cafe is a lunch cafe located in Dublin, Ireland. It features a responsive, interactive UI and a custom built online ordering system.",
+                    text: "Goose Cafe is a lunch cafe located in Dublin, Ireland. It's website features a responsive, interactive UI and a custom built online ordering system.",
                     tags: ["HTML/CSS", "Javascript", "JQuery", "Pug", "Node.js"],
-                    link: "https://goose.cafe",
+                    link: "unavailable",
                     codelink: "unavailable",
                     imgpath: "goosecafe.jpg"
                 },
-                Tetris: {
-                    text: "A simple Tetris clone built in Scala.",
-                    tags: ["Scala", "Gradle"],
+                RevolVR: {
+                    text: "RevolVR is a prototype game made for VR using Unity to explore evolutionary outcomes when a human is directly involved in the evolutionary process.",
+                    tags: ["C#", "Python", "Unity", "C++"],
                     link: "unavailable",
-                    codelink: "https://github.com/donalshortt/tetris",
-                    imgpath: "tetris.jpg"
+                    codelink: "https://github.com/donalshortt/RevolVR",
+                    imgpath: "revolvr.jpg"
                 },
                 Shell: {
                     text: "A stripped down version of the BASH shell. I learned a lot about how operating systems work while working on this. In particular how Linux handles processes.",
@@ -41,7 +42,21 @@
                     link: "unavailable",
                     codelink: "https://github.com/donalshortt/shell",
                     imgpath: "myshell.jpg"
-                }
+                },
+				Kernel: {
+					text: "A simple kernel made from scratch for the x86_64 architecture. Made to demonstrate the relative ease one can perform transient execution attacks in a low noise environment. Two attack examples are included, Flush+Reload & SpectreV1.",
+					tags: ["C", "Assembly"],
+					link:"unavailable",
+					codelink: "https://github.com/donalshortt/microcosmOS",
+					imgpath: "kernel.jpg"
+				},
+				MoC: {
+					text: "An application to run tournaments for the game Europa Universalis IV (EU4). Includes a web frontend and backend, and a TUI for monitoring EU4 gamestate.",
+					tags: ["Vue", "Node.js", "Rust"],
+					link: "unavailable",
+					codelink: "https://github.com/donalshortt/moc",
+					imgpath: "moc.jpg"
+				}
             }
         },
         methods: {

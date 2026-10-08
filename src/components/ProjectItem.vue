@@ -34,6 +34,7 @@
             getImg: function () {
                 // computed is called on undefined because the default state on projectItem is called with empty item <- look into more elegant solution maybe
                 if (this.imgpath === undefined) { return; }
+				// eslint-disable-next-line no-undef
                 return require('../assets/' + this.imgpath);
             }
         },
